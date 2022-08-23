@@ -1,0 +1,23 @@
+<p>task-tuesday works!</p>
+<button (click)="showData()">click here</button>
+<div id="main" *ngIf="show">
+    <form>
+        <label>Name</label>
+        <input type="text" #studentName><br>
+        <label>Category</label>
+        <select name="category" (change)="showCategory($event)">
+            <option value="Student" >Student</option>
+            <option value="Teacher">Teacher</option>
+        </select><br>
+        <label>Email</label>
+        <input type="email"><br>
+        <button type="button" *ngIf="showButtonStudent" (click)="showStudentName(studentName.value)">student</button>
+        <button type="button" *ngIf="showButtonTeacher" (click)="showTeacherInput()">teacher</button>
+        <br>
+        <input type="text" *ngIf="teacherInput" placeholder="this is teacher input">
+    </form>
+
+    <div *ngIf="nameOfStudent">
+        welcome {{name}}
+    </div>
+</div>
