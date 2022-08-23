@@ -1,0 +1,12 @@
+<p>reactiveform works!</p>
+
+<form [formGroup]="fName" (ngSubmit)="onsubmit()">
+    <label>Username</label>
+    <input type="text" formControlName="username">
+    <label>e-mail</label>
+    <input type="email" formControlName="email">
+    <label>Password</label>
+    <input type="password" formControlName="password">
+    <button>click</button>
+    <button>submit</button>
+</form>
